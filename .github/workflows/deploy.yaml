@@ -21,7 +21,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build
-    - run: cp dist/ _site/
+    - run: cp -r dist/ _site/
       
     - run: |
         chmod -c -R +rX "_site/" | while read line; do
