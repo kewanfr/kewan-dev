@@ -5,7 +5,7 @@ function Maintenance() {
       <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
         <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
           <h1 className="text-2xl font-bold mb-4">
-            Site en cours développement
+            Site en cours de développement
           </h1>
           <p className="text-gray-700 mb-4">
             Mon site{" "}
@@ -13,7 +13,9 @@ function Maintenance() {
               kewan.dev
             </a>{" "}
             est actuellement en cours de développement. <br />
-            Vous pouvez cependant vous rendre sur mon portfolio actuel ici: <br /><br />
+            Vous pouvez cependant vous rendre sur mon portfolio actuel ici:{" "}
+            <br />
+            <br />
             <a href="https://kewan.fr" className="text-blue-500">
               {" "}
               kewan.fr
