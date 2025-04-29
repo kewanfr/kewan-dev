@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "cp ./dist/index.html ./dist/404.html",
+    "postbuild": "cp ./dist/index.html ./dist/404.html && echo 'kewan.dev' > ./dist/CNAME",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
