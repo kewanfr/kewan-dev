@@ -1,0 +1,91 @@
+/* Tout plein écran, flex-col, align à gauche */
+.terminal-container {
+  background: #1b1b2b;
+  color: #66fcf1;
+  font-family: monospace;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Logo en dur, coloré, aligné à gauche */
+.logo {
+  color: #45a29e;
+  white-space: pre;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+/* Buffer scrollable */
+.terminal-buffer {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Chaque ligne de sortie */
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+/* Form de prompt actif */
+.terminal-prompt {
+  display: flex;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.prompt {
+  margin-right: 0.5rem;
+  color: #45a29e;
+}
+
+.prompt-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  caret-color: #10b981;
+}
+
+/* Boutons “terminal” alignés à gauche */
+.terminal-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.terminal-btn {
+  background-color: #66fcf1;
+  color: #1b1b2b;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  font-family: monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* État normal : fond transparent, texte turquoise */
+.terminal-btn {
+  background: transparent;
+  color: #66fcf1;
+}
+
+/* Hover : fond turquoise, texte foncé */
+.terminal-btn:hover {
+  background-color: #66fcf1;
+  color: #1b1b2b;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .terminal-container { padding: 0.5rem; }
+  .prompt-input, .terminal-btn { font-size: 0.9rem; }
+}
