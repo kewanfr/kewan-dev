@@ -28,17 +28,34 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   };
 
-  const io2 = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((e) => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible?.target?.id) setActive(visible.target.id);
+  const updateActiveSection = () => {
+    const scrollPos = window.scrollY + 100; // offset pour le header
+
+    let currentSection = sections[0]?.id;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        currentSection = section.id;
+      }
+    });
+
+    setActive(currentSection);
+  };
+
+  let scrollTimeout;
+  window.addEventListener(
+    "scroll",
+    () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(updateActiveSection, 50);
     },
-    { rootMargin: "-35% 0px -55% 0px", threshold: [0.1, 0.2, 0.3] },
+    { passive: true },
   );
 
-  sections.forEach((s) => io2.observe(s));
+  updateActiveSection(); // Initial check
 
   // Smooth scroll fallback + focus (améliore l’accessibilité)
   navLinks.forEach((a) => {

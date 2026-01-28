@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirection · Kewan Dev</title>
+  <script>
+    const routes = {
+      '/contact': '#contacter',
+      '/devis': '#devis',
+      '/services': '#services',
+      '/tarifs': '#tarifs',
+      '/pricing': '#tarifs',
+      '/a-propos': '#a-propos',
+      '/about': '#a-propos'
+    };
+
+    // Récupère le path actuel (enlève /fr si présent)
+    const path = window.location.pathname.replace('/fr', '').replace(/\/$/, '');
+    
+    // Si c'est une route connue, redirige vers la section
+    if (routes[path]) {
+      window.location.href = '/fr/' + routes[path];
+    } else {
+      // Sinon, redirige vers l'accueil
+      window.location.href = '/fr/';
+    }
+  </script>
+</head>
+<body>
+  <p style="text-align: center; margin-top: 50px;">Redirection en cours...</p>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentions légales · Kewan Dev</title>
+  <meta name="description" content="Mentions légales de Kewan Dev - Informations légales, SIRET, hébergement et données personnelles." />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#content">Aller au contenu</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <a href="./" style="color: inherit; text-decoration: none;"><span>Kewan Dev</span></a>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="./#about">À propos</a>
+        <a href="./#services">Services</a>
+        <a href="./#pricing">Tarifs</a>
+        <a href="./#devis">Devis</a>
+        <a href="./contact">Contact</a>
+        <a href="./mentions-legales" class="is-active">Mentions légales</a>
+        <a class="lang" href="../en/" aria-label="Switch to English">🇬🇧 EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section" style="padding-top: 120px;">
+      <div class="container">
+        <div class="section-head">
+          <h1>Mentions légales</h1>
+        </div>
+
+        <div class="card" style="max-width: 900px; margin: 0 auto;">
+          <h2>Informations légales</h2>
+          <p><strong>Raison sociale :</strong> KEWAN DEV</p>
+          <p><strong>SIRET :</strong> 989 200 910 00010</p>
+          <p><strong>Date de création :</strong> 14/07/2025</p>
+          <p><strong>Responsable de la publication :</strong> Kewan Bernier</p>
+          
+          <h2 style="margin-top: 32px;">Hébergement</h2>
+          <p>Ce site est hébergé par :</p>
+          <p><strong>Vercel Inc.</strong><br>
+          340 S Lemon Ave #4133<br>
+          Walnut, CA 91789<br>
+          États-Unis</p>
+
+          <h2 style="margin-top: 32px;">Propriété intellectuelle</h2>
+          <p>L'ensemble du contenu de ce site (textes, images, logos) est la propriété de KEWAN DEV, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+
+          <h2 style="margin-top: 32px;">Données personnelles</h2>
+          <p>Les informations collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes. Elles ne sont jamais partagées avec des tiers. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données en me contactant directement.</p>
+
+          <h2 style="margin-top: 32px;">Cookies</h2>
+          <p>Ce site n'utilise pas de cookies de tracking ou de publicité.</p>
+          
+          <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line);">
+            <a href="./" class="small">← Retour à l'accueil</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>
+          <div>© <span id="year"></span> Kewan Dev</div>
+          <div class="small" style="margin-top: 8px; opacity: 0.7;">Établissement actif depuis le 14/07/2025</div>
+          <div class="small" style="opacity: 0.7;">SIRET : 989 200 910 00010</div>
+        </div>
+        <div>
+          <a href="./mentions-legales" class="small">Mentions légales</a>
+          <span class="small" style="margin: 0 10px;">·</span>
+          <a href="./contact" class="small">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

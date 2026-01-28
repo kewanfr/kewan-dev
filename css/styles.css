@@ -263,6 +263,8 @@ p { margin: 0 0 12px; }
   padding: var(--s6) 0;
 }
 
+.section:focus { outline: none; }
+
 .section-head {
   display: flex;
   align-items: flex-end;
@@ -379,7 +381,7 @@ input, select, textarea {
 textarea { min-height: 140px; resize: vertical; }
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: rgba(56,189,248,.45);
+  /*border-color: rgba(56,189,248,.45);*/
   box-shadow: 0 0 0 4px rgba(56,189,248,.14);
 }
 
@@ -401,6 +403,31 @@ input:focus, select:focus, textarea:focus {
   transition: opacity .55s ease, transform .55s ease;
 }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(124, 92, 255, 0.4);
+  border-radius: 3px;
+}
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 92, 255, 0.6);
+}
 
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; }
