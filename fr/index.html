@@ -5,284 +5,301 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kewan Dev · Freelance</title>
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="alternate" hreflang="en" href="https://domaine.tld/en/">
 </head>
 <body>
-  <header class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand"><span class="dot" aria-hidden="true"></span> Kewan Dev</div>
+  <a class="skip" href="#content">Aller au contenu</a>
 
-        <nav class="nav" aria-label="Navigation principale">
-          <a href="#services">Services</a>
-          <a href="#pricing">Tarifs</a>
-          <a href="#estimator">Devis</a>
-          <a href="#contact">Contact</a>
-          <a class="langlink" href="../en/" aria-label="Switch to English">🇬🇧 EN</a>
-        </nav>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Kewan Dev</span>
       </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#services" data-section>Services</a>
+        <a href="#pricing" data-section>Tarifs</a>
+        <a href="#estimate" data-section>Devis</a>
+        <a href="#contact" data-section>Contact</a>
+        <a class="lang" href="../en/" aria-label="Switch to English">🇬🇧 EN</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="top">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="card">
-            <div class="badge">Étudiant & alternant · Freelance</div>
-            <h1>Développement web, hébergement et conseil technique</h1>
-            <p class="muted">
-              Je travaille sur mon temps libre, dans une logique de formation et de progression.
-              Cela me permet de proposer des tarifs accessibles, avec une approche claire et transparente.
-            </p>
+  <main id="content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="panel reveal">
+          <div class="kicker">Étudiant & alternant · freelance technique</div>
+          <h1>Hébergement, conseil et développement backend</h1>
+          <p class="sub">
+            Solutions simples et fiables, à prix accessible. Je privilégie le suivi, la transparence et les besoins concrets.
+          </p>
 
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#contact">Demander un devis</a>
-              <a class="btn" href="#services">Voir les services</a>
-            </div>
-
-            <p class="note">
-              Paiement : acompte au démarrage, solde après présentation et validation. Ajustements raisonnables inclus.
-            </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Demander un devis</a>
+            <a class="btn" href="#services">Voir les services</a>
           </div>
 
-          <div class="card">
-            <h3>En bref</h3>
-            <ul class="list">
-              <li>Conseil : hébergement, déploiement, SSL, migrations</li>
-              <li>Backend : API, bases de données, automatisations</li>
-              <li>Sites web simples : WordPress, corrections, optimisation</li>
-            </ul>
-            <p class="note">
-              Je privilégie les projets simples et les besoins concrets. Pour du design très avancé, je peux recommander un designer.
+          <div class="mini">
+            <div class="mini-row">
+              <span class="pill">Acompte au démarrage</span>
+              <span class="pill">Solde à la validation</span>
+              <span class="pill">Ajustements raisonnables</span>
+            </div>
+            <p class="small">
+              Je suis moins orienté design graphique. Si besoin, je peux recommander un designer, et je m’occupe du technique.
             </p>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Aperçu technique">
+          <div class="visual-inner">
+            <div class="mock">
+              <div class="mock-top">
+                <div class="dots" aria-hidden="true">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <span class="small">Deploy · SSL · Monitoring</span>
+              </div>
+              <pre class="code">> audit site
+✔ performance: 87/100
+✔ ssl: ok
+✔ backups: daily
+✔ uptime: 99.9%
+
+> deploy
+✔ build
+✔ upload
+✔ cache purge</pre>
+            </div>
+
+            <div class="mock">
+              <pre class="code">Forfaits hébergement
+Essentiel: 8–12 €/mois
+Standard: 15–20 €/mois
+Avancé: 25–35 €/mois</pre>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="services">
+    <section id="services" class="section" tabindex="-1">
       <div class="container">
         <div class="section-head">
           <h2>Services</h2>
-          <div class="hint">Priorité : hébergement, suivi et technique</div>
+          <div class="hint">Clair, suivi, orienté technique</div>
         </div>
 
-        <div class="grid-3">
-          <div class="card">
-            <h3>Conseil & accompagnement</h3>
-            <p class="muted">Clarifier les besoins, choisir la bonne solution, éviter les coûts inutiles.</p>
-            <ul class="list">
-              <li>Choix hébergement et stack</li>
-              <li>Déploiement, domaine, SSL</li>
-              <li>Audit rapide et priorités</li>
-            </ul>
-          </div>
-
-          <div class="card">
+        <div class="grid3">
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4V6zm2 2v8h12V8H6z"/></svg>
+            </div>
             <h3>Hébergement & maintenance</h3>
-            <p class="muted">Suivi mensuel, mises à jour, support, et un service fiable dans le temps.</p>
-            <ul class="list">
+            <p>Un service mensuel simple, stable, sans surprise.</p>
+            <ul class="bullets">
               <li>Mises à jour et sauvegardes</li>
               <li>Surveillance basique</li>
               <li>Support humain</li>
             </ul>
           </div>
 
-          <div class="card">
-            <h3>Backend & technique</h3>
-            <p class="muted">Données, logique, automatisations, intégrations.</p>
-            <ul class="list">
-              <li>API REST ou GraphQL (Node.js, PHP)</li>
-              <li>Bases de données (MySQL, PostgreSQL)</li>
-              <li>Scripts, webhooks, monitoring</li>
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l9 4v6c0 5-4 9-9 10C7 21 3 17 3 12V6l9-4z"/></svg>
+            </div>
+            <h3>Conseil & accompagnement</h3>
+            <p>Je t’aide à choisir et mettre en place la bonne solution.</p>
+            <ul class="bullets">
+              <li>Déploiement, domaine, SSL</li>
+              <li>Migrations (site, base)</li>
+              <li>Audit rapide et priorités</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 7h10v10H7V7zm-4 4h2v2H3v-2zm16 0h2v2h-2v-2zM11 3h2v2h-2V3zm0 16h2v2h-2v-2z"/></svg>
+            </div>
+            <h3>Backend & automatisations</h3>
+            <p>API, base de données, scripts, intégrations.</p>
+            <ul class="bullets">
+              <li>API REST ou GraphQL</li>
+              <li>Webhooks, jobs, scripts</li>
+              <li>Maintenance et sécurité</li>
             </ul>
           </div>
         </div>
 
-        <div class="card" style="margin-top:16px">
-          <h3>Sites web</h3>
-          <p class="muted">
-            Sites simples et efficaces (WordPress ou intégration légère). Je suis moins orienté design, mais sérieux sur la fiabilité et la mise en ligne.
-          </p>
-          <ul class="list">
-            <li>Création de vitrine simple</li>
-            <li>Mises à jour et corrections</li>
-            <li>Optimisation performance et responsive</li>
-          </ul>
+        <div class="grid2" style="margin-top:26px">
+          <div class="card reveal">
+            <h3>Sites web simples</h3>
+            <p>WordPress ou vitrine simple. Objectif: efficace et en ligne.</p>
+            <ul class="bullets">
+              <li>Création de vitrine simple</li>
+              <li>Corrections et mises à jour</li>
+              <li>Optimisation vitesse</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <h3>Ce que tu obtiens</h3>
+            <p>Un périmètre clair, une estimation avant action, et du suivi.</p>
+            <ul class="bullets">
+              <li>Devis clair</li>
+              <li>Livraison + validation</li>
+              <li>Option mensuelle si besoin</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="pricing">
+    <section id="pricing" class="section" tabindex="-1">
       <div class="container">
         <div class="section-head">
           <h2>Tarifs</h2>
           <div class="hint">Accessibles, mais viables après charges</div>
         </div>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Taux horaire</h3>
-            <div class="price">25 € / h</div>
-            <p class="muted">Conseil, maintenance, corrections, petites évolutions, technique.</p>
-            <p class="note">Le taux inclut mes charges. Devis clair avant intervention.</p>
+        <div class="grid2">
+          <div class="card reveal">
+            <div class="price">25 € / heure</div>
+            <p>Interventions, maintenance, conseil, petites évolutions.</p>
+            <p class="small">Toujours une estimation avant de commencer.</p>
           </div>
 
-          <div class="card">
-            <h3>Paiement</h3>
-            <p class="muted">Acompte au démarrage. Solde après présentation et validation. Ajustements raisonnables inclus.</p>
-            <ul class="list">
-              <li>Acompte recommandé : 30 %</li>
-              <li>Solde : 70 % à la validation</li>
+          <div class="card reveal">
+            <div class="price">Forfaits</div>
+            <p>Pour besoins simples. Au-delà, facturation à l’heure.</p>
+            <table class="table" aria-label="Forfaits">
+              <thead>
+                <tr><th>Prestation</th><th>Prix</th><th>Détails</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Site vitrine</td>
+                  <td><strong>à partir de 350 €</strong></td>
+                  <td>Pages essentielles, responsive, mise en ligne</td>
+                </tr>
+                <tr>
+                  <td>WordPress (thème existant)</td>
+                  <td><strong>à partir de 400 €</strong></td>
+                  <td>Installation, config, sécurité de base</td>
+                </tr>
+                <tr>
+                  <td>Backend / scripts</td>
+                  <td><strong>sur devis</strong></td>
+                  <td>API, automatisations, bases de données</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid3" style="margin-top:26px">
+          <div class="card reveal">
+            <div class="price">8 à 12 € / mois</div>
+            <p>Hébergement Essentiel</p>
+            <ul class="bullets">
+              <li>1 site, faible trafic</li>
+              <li>Mises à jour basiques</li>
+              <li>Support léger</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <div class="price">15 à 20 € / mois</div>
+            <p>Hébergement Standard</p>
+            <ul class="bullets">
+              <li>1 à 3 sites</li>
+              <li>Sauvegardes</li>
+              <li>Support régulier</li>
+            </ul>
+          </div>
+
+          <div class="card reveal">
+            <div class="price">25 à 35 € / mois</div>
+            <p>Hébergement Avancé</p>
+            <ul class="bullets">
+              <li>Plusieurs sites ou trafic élevé</li>
+              <li>Surveillance</li>
+              <li>Accompagnement technique</li>
             </ul>
           </div>
         </div>
 
-        <div class="card" style="margin-top:16px">
-          <h3>Forfaits développement</h3>
-          <table class="table" aria-label="Forfaits développement">
-            <thead>
-              <tr>
-                <th>Service</th>
-                <th>Prix</th>
-                <th>Détails</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Site vitrine simple</td>
-                <td><strong>à partir de 350 €</strong></td>
-                <td class="muted">Pages essentielles, responsive, mise en ligne, ajustements raisonnables.</td>
-              </tr>
-              <tr>
-                <td>WordPress (thème existant)</td>
-                <td><strong>à partir de 400 €</strong></td>
-                <td class="muted">Installation, configuration, sécurisation de base, mise en ligne.</td>
-              </tr>
-              <tr>
-                <td>Backend / scripts</td>
-                <td><strong>sur devis ou à l’heure</strong></td>
-                <td class="muted">API, automatisations, bases de données, intégrations.</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="note">Forfaits pensés pour des besoins simples. Au-delà, estimation à l’heure pour rester transparent.</p>
-        </div>
-
-        <div class="card" style="margin-top:16px">
-          <h3>Hébergement & maintenance mensuelle</h3>
-          <p class="muted">
-            Les tarifs varient selon le nombre de sites, le trafic et le niveau d’accompagnement.
-            Je limite volontairement le nombre de clients suivis.
-          </p>
-
-          <div class="grid-3" style="margin-top:16px">
-            <div class="card" style="background:var(--muted); box-shadow:none">
-              <h3>Essentiel</h3>
-              <div class="price">8 à 12 € / mois</div>
-              <ul class="list">
-                <li>1 site, faible trafic</li>
-                <li>Mises à jour basiques</li>
-                <li>Support léger</li>
-              </ul>
-            </div>
-
-            <div class="card" style="background:var(--muted); box-shadow:none">
-              <h3>Standard</h3>
-              <div class="price">15 à 20 € / mois</div>
-              <ul class="list">
-                <li>1 à 3 sites</li>
-                <li>Sauvegardes</li>
-                <li>Support régulier</li>
-              </ul>
-            </div>
-
-            <div class="card" style="background:var(--muted); box-shadow:none">
-              <h3>Avancé</h3>
-              <div class="price">25 à 35 € / mois</div>
-              <ul class="list">
-                <li>Plusieurs sites ou trafic élevé</li>
-                <li>Surveillance</li>
-                <li>Accompagnement technique</li>
-              </ul>
-            </div>
-          </div>
-
-          <p class="note">Après échange, je confirme le palier et le périmètre exact.</p>
+        <div class="card reveal" style="margin-top:26px">
+          <h3>Paiement</h3>
+          <p class="sub">Acompte au démarrage, solde après présentation et validation. Ajustements raisonnables inclus.</p>
         </div>
       </div>
     </section>
 
-    <section id="estimator">
+    <section id="estimate" class="section" tabindex="-1">
       <div class="container">
         <div class="section-head">
-          <h2>Calculateur de devis</h2>
-          <div class="hint">Estimation indicative</div>
+          <h2>Estimation</h2>
+          <div class="hint">Indicatif, non contractuel</div>
         </div>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Votre besoin</h3>
-
-            <div style="display:grid; gap:12px">
+        <div class="grid2">
+          <div class="card reveal">
+            <h3>Calcul rapide</h3>
+            <div class="form">
               <div>
-                <label for="type">Type de demande</label>
+                <label for="type">Type</label>
                 <select id="type">
                   <option value="support">Intervention / maintenance</option>
-                  <option value="vitrine">Site vitrine simple</option>
-                  <option value="wp">WordPress (thème existant)</option>
+                  <option value="vitrine">Site vitrine</option>
+                  <option value="wp">WordPress</option>
                   <option value="backend">Backend / technique</option>
                 </select>
               </div>
-
               <div>
-                <label for="hours">Heures estimées (si intervention)</label>
+                <label for="hours">Heures (si à l’heure)</label>
                 <input id="hours" type="number" min="0" step="1" value="2" />
               </div>
-
               <div>
                 <label for="host">Hébergement mensuel</label>
                 <select id="host">
                   <option value="0">Non</option>
-                  <option value="10">Essentiel (≈ 10 € / mois)</option>
-                  <option value="18">Standard (≈ 18 € / mois)</option>
-                  <option value="30">Avancé (≈ 30 € / mois)</option>
+                  <option value="10">Essentiel</option>
+                  <option value="18">Standard</option>
+                  <option value="30">Avancé</option>
                 </select>
               </div>
-
               <button class="btn btn-primary" type="button" id="calcBtn">Calculer</button>
+              <p class="small">Un devis précis est confirmé après échange.</p>
             </div>
-
-            <p class="note">Cette estimation n’est pas contractuelle. Un devis précis est établi après échange.</p>
           </div>
 
-          <div class="card">
+          <div class="card reveal">
             <h3>Résultat</h3>
-            <p class="muted">Coût initial estimé et mensuel (si hébergement).</p>
-
-            <div class="card" style="background:var(--muted); box-shadow:none; margin-top:12px">
-              <p style="margin:0"><strong>Initial :</strong> <span id="initPrice">—</span></p>
-              <p style="margin:10px 0 0"><strong>Mensuel :</strong> <span id="monthPrice">—</span></p>
+            <p class="sub">Initial et mensuel estimés.</p>
+            <div class="card" style="background: rgba(255,255,255,.05); border-color: var(--line); box-shadow:none;">
+              <p><strong>Initial:</strong> <span id="initPrice">—</span></p>
+              <p><strong>Mensuel:</strong> <span id="monthPrice">—</span></p>
             </div>
-
-            <div class="cta-row" style="margin-top:12px">
-              <a class="btn" href="#contact">Faire une demande détaillée</a>
+            <div style="margin-top:14px;">
+              <a class="btn" href="#contact">Demande détaillée</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section" tabindex="-1">
       <div class="container">
         <div class="section-head">
-          <h2>Contact / Devis</h2>
+          <h2>Contact</h2>
           <div class="hint">Réponse dès que possible</div>
         </div>
 
-        <div class="card">
-          <form action="#" method="post">
+        <div class="card reveal">
+          <form class="form" action="#" method="post">
             <div class="form-grid">
               <div>
                 <label for="name">Nom</label>
@@ -294,42 +311,68 @@
               </div>
             </div>
 
-            <div style="margin-top:16px">
+            <div>
               <label for="subject">Sujet</label>
               <input id="subject" name="subject" />
             </div>
 
-            <div style="margin-top:16px">
-              <label for="message">Décrivez votre besoin</label>
-              <textarea id="message" name="message" placeholder="Ex : site existant à corriger, besoin d’hébergement, petite API…"></textarea>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Décris le besoin, le délai, et si tu veux un suivi mensuel."></textarea>
             </div>
 
-            <div class="cta-row" style="margin-top:16px">
+            <div style="display:flex; gap:12px; flex-wrap:wrap;">
               <button class="btn btn-primary" type="submit">Envoyer</button>
               <a class="btn" href="#pricing">Voir les tarifs</a>
             </div>
 
-            <p class="note">Acompte au démarrage, solde à la validation. Ajustements raisonnables inclus.</p>
+            <p class="small">Acompte au démarrage. Solde à la validation. Ajustements raisonnables inclus.</p>
           </form>
         </div>
       </div>
     </section>
 
-    <section class="footer">
-      <div class="container">
-        <div class="footer-row">
-          <div>© <span id="year"></span> Kewan Dev</div>
-          <div>
-            <a class="muted" href="#">Mentions légales</a>
-            <span style="margin:0 10px">·</span>
-            <a class="muted" href="#contact">Contact</a>
-          </div>
+    <footer class="footer">
+      <div class="container footer-row">
+        <div>© <span id="year"></span> Kewan Dev</div>
+        <div>
+          <a href="#" class="small">Mentions légales</a>
+          <span class="small" style="margin: 0 10px;">·</span>
+          <a href="#contact" class="small">Contact</a>
         </div>
       </div>
-    </section>
+    </footer>
   </main>
 
-  <script src="../js/estimator.js"></script>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    // Calculateur simple (même logique que tout à l’heure, stable)
+    const HOURLY = 25;
+    const BASE = { vitrine: 350, wp: 400 };
+
+    function money(n){
+      return new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(n);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("calcBtn");
+      if (btn) {
+        btn.addEventListener("click", () => {
+          const type = document.getElementById("type").value;
+          const hours = Number(document.getElementById("hours").value || 0);
+          const host = Number(document.getElementById("host").value || 0);
+
+          let initial = 0;
+          if (type === "support") initial = hours * HOURLY;
+          else if (type === "backend") initial = Math.max(2, hours) * HOURLY;
+          else initial = BASE[type] || 0;
+
+          document.getElementById("initPrice").textContent = initial ? money(initial) : "Sur devis";
+          document.getElementById("monthPrice").textContent = host ? money(host) : "—";
+        });
+      }
+    });
+  </script>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>
