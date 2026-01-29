@@ -1,9 +1,30 @@
 version: "3.9"
 
 services:
-  php:
+  web:
     build: .
     container_name: php_apache
     volumes:
       - ./src:/var/www/html
+    env_file:
+      - ./.env
+    depends_on:
+      - db
     restart: unless-stopped
+
+  db:
+    image: mariadb:11
+    container_name: mariadb
+    env_file:
+      - ./.env
+    environment:
+      MARIADB_DATABASE: ${DB_NAME}
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PASS}
+      MARIADB_ROOT_PASSWORD: ${DB_PASS}
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  db_data:
