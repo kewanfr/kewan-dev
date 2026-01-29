@@ -1,10 +1,64 @@
+# RewriteEngine On
+
+# # Si un fichier ou dossier existe, on laisse Apache faire
+# RewriteCond %{REQUEST_FILENAME} -f [OR]
+# RewriteCond %{REQUEST_FILENAME} -d
+# RewriteRule ^ - [L]
+
+# # Sinon, on essaie de rediriger /api/xxx vers /api/xxx/index.php si le dossier existe
+# RewriteCond %{DOCUMENT_ROOT}/$1/index.php -f
+# RewriteRule ^(api/[^/]+)/?$ $1/index.php [L]
+
+# Sinon, fallback vers ton index (si tu as un front controller)
+# RewriteRule ^ index.php [L]
+
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 
+# ------------------------------------------------------------
+# 0) Ne pas toucher aux fichiers/dossiers existants
+# ------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-RewriteEngine On
+# ------------------------------------------------------------
+# 1) Laisser l'API tranquille
+# ------------------------------------------------------------
+RewriteRule ^api(/.*)?$ - [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+# ------------------------------------------------------------
+# 2) Routes "dossiers" -> index.php
+# ------------------------------------------------------------
+RewriteRule ^admin/?$ admin/index.php [L]
+RewriteRule ^api/admin/?$ api/admin/index.php [L]
+RewriteRule ^api/contact/?$ api/contact/index.php [L]
+RewriteRule ^api/devis/?$ api/devis/index.php [L]
+RewriteRule ^fr/?$ fr/index.php [L]
+RewriteRule ^en/?$ en/index.php [L]
+
+# ------------------------------------------------------------
+# 3) Racine -> /fr/index.php
+# ------------------------------------------------------------
+RewriteRule ^$ fr/index.php [L]
+
+# ------------------------------------------------------------
+# 4) Redirections ancres : /contact -> /fr/index.php#contact
+#    (et /fr/contact -> /fr/index.php#contact, /en/contact -> /en/index.php#contact)
+#
+#    IMPORTANT: une ancre (#...) n'est pas envoyée au serveur.
+#    Donc on est obligé de faire une redirection (R=302/301).
+# ------------------------------------------------------------
+
+# A) Avec langue explicite: /fr/xxx ou /en/xxx
+#    On redirige vers /<lang>/index.php#<slug>
+RewriteRule ^(fr|en)/(contact|contacter|a-propos|devis|mentions-legales|services|tarifs)/?$ /$1/index.php#$2 [R=302,L,NE]
+
+# B) Sans langue: /xxx -> /fr/index.php#xxx
+RewriteRule ^(a-propos|contact|contacter|devis|mentions-legales|services|tarifs)/?$ /fr/index.php#$1 [R=302,L,NE]
+
+# ------------------------------------------------------------
+# 5) (Optionnel) Tout le reste -> /fr/index.php (SPA-like)
+#    Si tu veux que n'importe quelle URL inconnue retombe sur /fr/index.php
+#    décommente la ligne suivante.
+# ------------------------------------------------------------
+# RewriteRule ^ fr/index.php [L]
