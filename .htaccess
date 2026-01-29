@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^fr(/.*)?$ /index.php [L,QSA]
+RewriteRule ^en(/.*)?$ /index.php [L,QSA]
+
+# Redirect root to default language (French)
+RewriteRule ^$ /fr/ [L,R=301]
