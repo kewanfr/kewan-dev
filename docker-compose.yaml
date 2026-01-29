@@ -4,8 +4,6 @@ services:
   php:
     build: .
     container_name: php_apache
-    ports:
-      - "8888:80"
     volumes:
       - ./src:/var/www/html
     restart: unless-stopped
