@@ -17,6 +17,8 @@ RewriteEngine On
 # ------------------------------------------------------------
 # 0) Ne pas toucher aux fichiers/dossiers existants
 # ------------------------------------------------------------
+# Exclure la racine pour permettre la redirection vers /fr/index.php
+RewriteCond %{REQUEST_URI} !^/$
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
