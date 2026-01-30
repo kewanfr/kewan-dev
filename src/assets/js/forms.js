@@ -565,12 +565,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
+
       const res = await fetch(form.action, {
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" },
         credentials: "same-origin",
       });
+
 
       let data = null;
       try {

@@ -304,7 +304,7 @@ Avancé: 25–35 €/mois</pre>
         </div>
 
         <div class="card reveal">
-          <form class="form" action="#" method="post">
+          <form class="form" action="/api/devis" method="post">
             <div class="form-grid">
               <div>
                 <label for="name">Nom <span style="color: red;">*</span></label>
@@ -424,7 +424,7 @@ Avancé: 25–35 €/mois</pre>
         </div>
 
         <div class="card reveal">
-          <form class="form" action="#" method="post">
+          <form class="form" action="/api/contact" method="post">
             <div class="form-grid">
               <div>
                 <label for="name-contact">Nom <span style="color: red;">*</span></label>
