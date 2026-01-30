@@ -5,6 +5,8 @@ var_dump(env('SMTP_HOST', ''));
 var_dump(env('DB_USER', ''));
 
 
+echo "test";
+
 ?>
 
 <!doctype html>
