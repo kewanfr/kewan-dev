@@ -1,3 +1,12 @@
+<?php
+
+var_dump(env('ADMIN_PASSWORD_HASH', ''));
+var_dump(env('SMTP_HOST', ''));
+var_dump(env('DB_USER', ''));
+
+
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>

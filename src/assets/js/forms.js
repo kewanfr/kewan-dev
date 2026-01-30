@@ -372,6 +372,136 @@
 //   calculerEstimation();
 // });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   function addFeedback(form, ok, text) {
+//     form.querySelectorAll(".form-feedback").forEach((el) => el.remove());
+//     const div = document.createElement("div");
+//     div.className = "form-feedback";
+//     div.style.padding = "14px";
+//     div.style.borderRadius = "12px";
+//     div.style.marginTop = "14px";
+//     div.style.border = ok
+//       ? "1px solid rgba(56, 189, 248, 0.35)"
+//       : "1px solid rgba(255, 107, 107, 0.35)";
+//     div.style.background = ok
+//       ? "rgba(56, 189, 248, 0.14)"
+//       : "rgba(255, 107, 107, 0.14)";
+//     div.style.color = ok ? "rgba(56, 189, 248, 0.95)" : "#ff6b6b";
+//     div.textContent = (ok ? "✓ " : "✗ ") + text;
+//     form.appendChild(div);
+//     setTimeout(
+//       () => div.scrollIntoView({ behavior: "smooth", block: "nearest" }),
+//       80,
+//     );
+//   }
+
+//   function isValidEmail(email) {
+//     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+//   }
+
+//   async function submitViaFetch(form, formType) {
+//     // Validation minimale adaptée à TES champs
+//     if (formType === "contact") {
+//       const name = (form.querySelector("#name-contact")?.value || "").trim();
+//       const email = (form.querySelector("#email-contact")?.value || "").trim();
+//       const message = (
+//         form.querySelector("#message-contact")?.value || ""
+//       ).trim();
+
+//       if (!name) return addFeedback(form, false, "Le nom est requis.");
+//       if (!email) return addFeedback(form, false, "L'email est requis.");
+//       if (!isValidEmail(email))
+//         return addFeedback(form, false, "L'email n'est pas valide.");
+//       if (!message) return addFeedback(form, false, "Le message est requis.");
+//     }
+
+//     if (formType === "devis") {
+//       const name = (form.querySelector("#name")?.value || "").trim();
+//       const email = (form.querySelector("#email")?.value || "").trim();
+//       const message = (form.querySelector("#message")?.value || "").trim();
+
+//       if (!name) return addFeedback(form, false, "Le nom est requis.");
+//       if (!email) return addFeedback(form, false, "L'email est requis.");
+//       if (!isValidEmail(email))
+//         return addFeedback(form, false, "L'email n'est pas valide.");
+//       if (!message) return addFeedback(form, false, "Le message est requis.");
+//     }
+
+//     const submitBtn = form.querySelector('button[type="submit"]');
+//     const original = submitBtn?.textContent || "Envoyer";
+//     if (submitBtn) {
+//       submitBtn.disabled = true;
+//       submitBtn.textContent = "Envoi en cours...";
+//     }
+
+//     try {
+//       const res = await fetch(form.action, {
+//         method: "POST",
+//         body: new FormData(form),
+//         headers: { Accept: "application/json" },
+//         credentials: "same-origin",
+//       });
+
+//       let data = null;
+//       try {
+//         data = await res.json();
+//       } catch (_) {}
+
+//       if (!res.ok || !data || data.ok !== true) {
+//         throw new Error(
+//           data?.error || `Erreur (${res.status}) lors de l'envoi.`,
+//         );
+//       }
+
+//       addFeedback(form, true, "Message envoyé avec succès !");
+//       form.reset();
+
+//       // Si devis : reset services + estimation si tu as ces éléments
+//       if (formType === "devis") {
+//         document
+//           .querySelectorAll('#servicesDropdown input[name="services"]')
+//           .forEach((cb) => (cb.checked = false));
+//         // Si tu as tes fonctions updateServicesPlaceholder/calculerEstimation, appelle-les ici si elles existent
+//         if (typeof window.updateServicesPlaceholder === "function")
+//           window.updateServicesPlaceholder();
+//         if (typeof window.calculerEstimation === "function")
+//           window.calculerEstimation();
+//       }
+//     } catch (err) {
+//       addFeedback(form, false, err?.message || "Erreur lors de l'envoi.");
+//     } finally {
+//       if (submitBtn) {
+//         submitBtn.disabled = false;
+//         submitBtn.textContent = original;
+//       }
+//     }
+//   }
+
+//   // 🔒 Sélecteurs robustes: on prend les forms par action
+//   const formContact = document.querySelector('form[action="/api/contact"]');
+//   const formDevis = document.querySelector('form[action="/api/devis"]');
+
+//   if (formContact) {
+//     formContact.addEventListener("submit", (e) => {
+//       e.preventDefault();
+//       e.stopPropagation();
+//       submitViaFetch(formContact, "contact");
+//     });
+//   }
+
+//   if (formDevis) {
+//     formDevis.addEventListener("submit", (e) => {
+//       e.preventDefault();
+//       e.stopPropagation();
+//       submitViaFetch(formDevis, "devis");
+//     });
+//   }
+
+//   // Petit check debug (tu peux supprimer après)
+//   console.log("[forms] contact=", !!formContact, "devis=", !!formDevis);
+// };);
+
+
 document.addEventListener("DOMContentLoaded", () => {
   function addFeedback(form, ok, text) {
     form.querySelectorAll(".form-feedback").forEach((el) => el.remove());
@@ -499,4 +629,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Petit check debug (tu peux supprimer après)
   console.log("[forms] contact=", !!formContact, "devis=", !!formDevis);
-};);
+});
