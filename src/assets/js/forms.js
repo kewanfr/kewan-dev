@@ -566,7 +566,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
 
-      const res = await fetch(`https://kewan.dev/${form.action}`, {
+      const res = await fetch(`https://kewan.dev/api/devis` {
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" },
