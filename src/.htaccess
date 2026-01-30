@@ -61,4 +61,4 @@ RewriteRule ^(a-propos|contact|contacter|devis|mentions-legales|services|tarifs)
 #    Si tu veux que n'importe quelle URL inconnue retombe sur /fr/index.php
 #    décommente la ligne suivante.
 # ------------------------------------------------------------
-# RewriteRule ^ fr/index.php [L]
+RewriteRule ^ fr/index.php [L]
