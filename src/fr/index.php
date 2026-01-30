@@ -1,8 +1,8 @@
 <?php
 
-var_dump(env('ADMIN_PASSWORD_HASH', ''));
-var_dump(env('SMTP_HOST', ''));
-var_dump(env('DB_USER', ''));
+var_dump(getenv('ADMIN_PASSWORD_HASH', ''));
+var_dump(getenv('SMTP_HOST', ''));
+var_dump(getenv('DB_USER', ''));
 
 
 echo "test";
