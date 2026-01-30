@@ -1,20 +1,9 @@
-<?php
-
-var_dump(getenv('ADMIN_PASSWORD_HASH', ''));
-var_dump(getenv('SMTP_HOST', ''));
-var_dump(getenv('DB_USER', ''));
-
-
-echo "test";
-
-?>
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kewan Dev · Freelance</title>
+  <title>Kewan Dev · Freelance - FR</title>
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
   <meta name="description" content="Kewan BERNIER, développeur web et applications en freelance. Étudiant en informatique à Nantes, je propose des services techniques accessibles aux particuliers et petites structures." />
